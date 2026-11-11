@@ -1,72 +1,97 @@
-# Catastro — superficies, valor y procedimientos
+# Catastro — superficies, avalúo y procedimientos (Colombia)
 
-Fuente: TRLCI (Real Decreto Legislativo 1/2004) y Ley 13/2015; criterios de
-valoración de la ponencia de valores municipal. Añadir la norma nacional que
-corresponda si el proyecto no es de España.
+Fuente: Ley 44 de 1990 (impuesto predial unificado); Ley 1995 de 2019 (límites
+al incremento del impuesto); Ley 1955 de 2019 (catastro multipropósito); Ley
+2294 de 2023, artículo 49; Resolución IGAC 388 de 2020, modificada por la
+Resolución IGAC 679 de 2022; Resolución Conjunta IGAC 1101 y SNR 11344 de 2020
+(interoperabilidad catastro–registro); Ley 160 de 1994 (ordenamiento social de
+la propiedad).
 
 ## 1. Tipos de superficie
 
 | Superficie | Qué mide | Dónde aparece |
 | --- | --- | --- |
-| Gráfica de la parcela | suelo, medida sobre cartografía | ficha catastral |
-| Construida | suma de plantas del inmueble | ficha y escritura |
-| Útil | aprovechable, sin tabiques ni elementos comunes | tasaciones |
-| Registral | la que figura en el Registro | escritura |
+| Catastral o gráfica | suelo del predio, medida sobre cartografía o levantamiento | ficha predial y NPN |
+| Construida | suma de las plantas del inmueble | ficha predial y escritura |
+| Privada o útil | área aprovechable de la unidad, sin zonas comunes | propiedad horizontal |
+| Registral | la que consta en el folio de matrícula inmobiliaria | certificado de tradición y libertad |
 
-Dos superficies distintas para la misma finca no son un error por sí mismas:
-hay que decir **de qué superficie se habla** y con qué método se midió.
+Dos superficies distintas para el mismo predio no son un error por sí mismas:
+hay que decir **de qué superficie se habla** y con qué método se midió. La
+superficie catastral no siempre coincide con la registral, y el catastro y el
+registro se articulan mediante el NUPRE (Resolución Conjunta IGAC 1101 y SNR
+11344 de 2020).
 
-## 2. Valor catastral
+## 2. Avalúo catastral
 
-Es el valor administrativo del inmueble, base del Impuesto sobre Bienes
-Inmuebles (IBI). Se obtiene de:
-
-1. **Ponencia de valores**: estudio del municipio que fija módulos (valor de
-   suelo y de construcción) por zona y uso.
-2. **Aplicación de módulos** a la superficie y características del inmueble.
-3. **Coeficientes** de actualización anuales.
-
-Fórmula simplificada:
+Es el valor administrativo del predio y la base del **impuesto predial
+unificado (IPU)**. Se forma con:
 
 ```
-valor_catastral ≈ (valor_suelo × superficie_suelo)
-                + (valor_construcción × superficie_construida × coeficientes)
+avalúo_catastral = valor_del_terreno + valor_de_la_construcción
 ```
 
-No es un precio de mercado: es una base fiscal. Un valor catastral bajo no
-implica un precio de venta bajo.
+El valor del terreno sale de las **zonas homogéneas físicas y geoeconómicas**
+del municipio; el de la construcción, de sus características y estado. El
+resultado se consigna en la **ficha predial**. El avalúo no es un precio de
+mercado: es una base fiscal.
 
-## 3. Deslinde administrativo (resumen del procedimiento)
+## 3. Impuesto predial unificado (IPU)
 
-1. Inicio de oficio o a instancia de titular.
-2. Notificación a colindantes y publicación.
-3. Levantamiento topográfico y propuesta de linderos.
-4. Periodo de alegaciones.
-5. Resolución y, si procede, amojonamiento.
-6. Actualización de la cartografía catastral.
+- **Base gravable**: el avalúo catastral o el autoavalúo (Ley 44 de 1990,
+  artículo 3).
+- **Tarifa**: entre 5 y 16 por mil, fijada por el concejo municipal (Ley 44 de
+  1990, artículo 4, modificado por la Ley 1450 de 2011, artículo 23).
+- **Límite al incremento** (Ley 1995 de 2019, artículo 2):
+  - predios actualizados: el IPU no puede subir más del IPC más 8 puntos;
+  - predios no actualizados: el incremento máximo es del 50 %;
+  - estratos 1 y 2 con avalúo hasta 135 smmlv tienen tope propio.
 
-## 4. Concentración parcelaria
+## 4. Procesos catastrales
 
-Proceso por el que se agrupan parcelas dispersas de un mismo titular en lotes
-más grandes y regulares, con nueva red de caminos y desagües.
+1. **Formación**: se crea el catastro en un municipio que no lo tiene.
+2. **Actualización**: se renueva la información física, jurídica y económica,
+   por barrido predial masivo o por actualización puntual.
+3. **Conservación**: se mantiene al día con las mutaciones que el propietario
+   declara o que la autoridad detecta (construcciones, subdivisiones,
+   englobes, cambios de uso).
+4. **Barrido predial masivo**: levantamiento predio a predio con enfoque
+   multipropósito, con participación de la comunidad y articulación con el
+   registro.
+5. **Interoperabilidad catastro–registro**: intercambio de datos entre IGAC,
+   gestores catastrales y SNR para que NPN y folio de matrícula apunten al mismo
+   predio.
 
-Efectos típicos:
-- disminución del número de parcelas;
-- aumento de la superficie media por explotación;
-- nueva numeración de polígonos y parcelas;
-- necesidad de actualizar títulos y cartografía.
+## 5. Ordenamiento social de la propiedad
 
-## 5. Caso práctico resuelto
+El **ordenamiento social de la propiedad** y la **formalización de la propiedad
+rural** (Ley 160 de 1994 y la ANT) buscan clarificar linderos, titularidad y uso
+del suelo. En la ciudad, la figura equivalente es la **formalización
+urbanística** y la actualización catastral del barrio.
 
-**Enunciado**: una parcela tiene 1.850 m² según catastro y 1.902 m² según un
+## 6. Deslinde: vía judicial y vía catastral
+
+- **Judicial**: proceso de deslinde y amojonamiento ante juez, artículos 400 a
+  405 del Código General del Proceso; el artículo 401 fija los requisitos.
+- **Catastral**: rectificación de linderos o actualización con levantamiento
+  topográfico. Si hay acuerdo entre colindantes, se aportan los documentos y el
+  levantamiento; si no lo hay, el catastro no resuelve la propiedad y el caso va
+  al juez.
+
+## 7. Caso práctico resuelto
+
+**Enunciado**: un predio tiene 1.850 m² según catastro y 1.902 m² según un
 levantamiento con GNSS. ¿Es un error?
 
 **Razonamiento**:
 1. La diferencia es de 52 m² (2,8 %).
-2. La superficie catastral es gráfica, digitalizada a escala 1:1.000–1:2.000.
-3. El levantamiento GNSS tiene precisión centimétrica.
+2. La superficie catastral es gráfica y puede venir de una cartografía a escala
+   1:1.000 o 1:2.000.
+3. El levantamiento GNSS tiene precisión centimétrica y se apoya en
+   MAGNA-SIRGAS.
 4. Un 2,8 % es compatible con la digitalización, no con un error grave.
 
 **Conclusión**: no es un error; es una diferencia de método. Para corregirla se
-presenta un documento de alteración catastral con el levantamiento y la
-coordenadas en el sistema de referencia oficial.
+presenta una solicitud de actualización o conservación catastral con el
+levantamiento y las coordenadas en el sistema de referencia oficial
+(MAGNA-SIRGAS).

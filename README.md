@@ -1,8 +1,11 @@
-﻿# Cuerpo de conocimiento de ingeniería catastral y geodesia
+﻿# Cuerpo de conocimiento de ingeniería catastral y geodesia (Colombia)
 
 Sistema multiagente local orquestado por **OpenCode**. Un enrutador (agente C)
 recibe la consulta, decide si es de catastro o de geodesia y la delega al
 especialista local correspondiente.
+
+Todo el contenido está contextualizado a **Colombia**: IGAC, SNR, NPN de 30
+dígitos, NUPRE, avalúo catastral, MAGNA-SIRGAS 2018, CTM12 y QGeoidCOL2023.
 
 ## Flujo de trabajo
 
@@ -81,17 +84,17 @@ opencode
 El agente por defecto es `agente-c-enrutador`. También existe el atajo:
 
 ```
-/consulta ¿Qué diferencia hay entre referencia catastral y número de finca?
+/consulta ¿Qué diferencia hay entre NPN y NUPRE?
 ```
 
 ## Ejemplo de sesión
 
 ```
 ┌─ ENRUTADOR ─────────────────────────────────────────────
-│ Consulta: diferencia entre referencia catastral y finca registral
-│ Señales:  referencia catastral, finca registral, catastro
+│ Consulta: diferencia entre NPN y NUPRE
+│ Señales:  NPN, NUPRE, identificadores catastrales
 │ Destino:  agente-a-catastro
-│ Motivo:   identificadores de inmuebles, dominio catastral
+│ Motivo:   identificadores de predios, dominio catastral
 └─────────────────────────────────────────────────────────
 
 ## Catastro

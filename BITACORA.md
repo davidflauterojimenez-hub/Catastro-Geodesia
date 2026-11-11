@@ -32,10 +32,10 @@ coinciden con los commits del repositorio.
   | **B** · geodesia | especialista de dominio | `geodesia-qwen:latest` (Qwen 2.5 7B, Q4_K_M) | local · 4,7 GB |
 
 - Se escribió la base de conocimiento `conocimiento/` con 5 archivos:
-  - `catastro/01-conceptos.md` (parcela, polígono, referencia catastral, linderos)
-  - `catastro/02-procesos.md` (superficie, valor catastral, deslinde, concentración parcelaria)
-  - `geodesia/01-sistemas-referencia.md` (datum, ETRS89, WGS84, EPSG, UTM, geoide)
-  - `geodesia/02-gnss-transformaciones.md` (GNSS, RTK, nivelación, tolerancias)
+  - `catastro/01-conceptos.md` (conceptos básicos de catastro)
+  - `catastro/02-procesos.md` (superficies, valor y procedimientos)
+  - `geodesia/01-sistemas-referencia.md` (sistemas de referencia y proyecciones)
+  - `geodesia/02-gnss-transformaciones.md` (GNSS, nivelación y transformaciones)
   - `indice.md` con el mapa de temas y las reglas de la base
 - Cada archivo de conocimiento empieza con una línea `Fuente:` con la norma o
   referencia de origen, para que las respuestas sean verificables.
@@ -65,6 +65,35 @@ coinciden con los commits del repositorio.
   profesor": clonar, copiar `config_agentes` a `.opencode`, `npm install` y
   ejecutar `opencode`.
 
+### Fase 5 · Contextualización a Colombia (10 de noviembre de 2026)
+
+- Se reescribió la base de conocimiento completa para responder solo con
+  normativa colombiana.
+- **Catastro**:
+  - NPN de 30 dígitos (Resolución IGAC 1149 de 2021) y NUPRE `ABC-1234-DEFH`
+    (Decreto 148 de 2020).
+  - Predio, mejora, unidad predial, propiedad horizontal y modelo LADM_COL.
+  - Avalúo catastral, zonas homogéneas físicas y geoeconómicas, ficha predial.
+  - IPU: base gravable y tarifa de 5 a 16 por mil (Ley 44 de 1990), límites de
+    incremento (Ley 1995 de 2019).
+  - Exactitud posicional del levantamiento (Resolución IGAC 388 de 2020,
+    modificada por la 679 de 2022).
+  - Deslinde y amojonamiento judicial (Código General del Proceso, artículos
+    400 a 405) y su equivalente catastral.
+  - Se documentó el ordenamiento social de la propiedad y la formalización
+    (Ley 160 de 1994).
+- **Geodesia**:
+  - MAGNA-SIRGAS 2018 (Resolución IGAC 715 de 2018, ITRF2014 época 2018.0) y
+    MAGNA-SIRGAS original (Resolución IGAC 068 de 2005).
+  - CTM12 / Origen Nacional, EPSG:9377 (Resolución IGAC 370 de 2021).
+  - Zonas Gauss-Krüger EPSG 3114 a 3118 y zona Bogotá 2018 EPSG 11116.
+  - Geoide QGeoidCOL2023 (Resolución IGAC 0515 de 2026) y su reemplazo de
+    GEOCOL2004.
+  - Red MAGNA-ECO, cambio de época con VEMOS y herramienta MAGNA-SIRGAS PRO 7.
+- Se actualizaron los tres agentes y sus copias en `config_agentes/` (se
+  verificó que los hashes son idénticos), además de `AGENTS.md`, `README.md` y
+  este archivo.
+
 ---
 
 ## 3. Decisiones técnicas
@@ -78,6 +107,7 @@ coinciden con los commits del repositorio.
 | Cada especialista solo puede leer (`read`, `glob`, `grep`) y tiene `bash`, `edit`, `task`, `webfetch` denegados | los modelos 7B son poco fiables: se les encierra en su dominio y en la base local |
 | El enrutador verifica cifras contra el archivo `Fuente:` citado | los modelos 7B fallan en aritmética; C (nube) es quien garantiza que lo publicado coincide con la base |
 | Regla dura en los especialistas: "toda cifra debe aparecer literalmente en el archivo leído" | reduce alucinaciones numéricas en un dominio (catastro/geodesia) donde los números importan |
+| Base de conocimiento acotada a Colombia (IGAC, SNR, NPN, NUPRE, MAGNA-SIRGAS, CTM12) | evita que los modelos 7B mezclen normas de otros países y mantiene respuestas verificables |
 
 ---
 
@@ -149,7 +179,7 @@ npm install   # dentro de .opencode
 # 3. Ejecutar
 opencode
 # y consultar con:
-# /consulta ¿Qué diferencia hay entre referencia catastral y número de parcela?
+# /consulta ¿Qué diferencia hay entre NPN y NUPRE?
 ```
 
 ## 8. Lecciones aprendidas

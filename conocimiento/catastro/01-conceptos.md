@@ -1,62 +1,110 @@
-# Catastro — conceptos básicos
+# Catastro — conceptos básicos (Colombia)
 
-Fuente: Ley 13/2015 (reforma de la Ley Hipotecaria y del Texto Refundido de la
-Ley del Catastro Inmobiliario, España); texto consolidado del Real Decreto
-Legislativo 1/2004 (TRLCI). Los detalles autonómicos y los de otros países
-deben añadirse como archivos propios.
+Fuente: Ley 44 de 1990 (impuesto predial unificado y catastro); Ley 1995 de
+2019 (normas catastrales); Ley 1955 de 2019, artículos 79 a 82 (catastro
+multipropósito); Decreto 148 de 2020 (NUPRE); Resolución IGAC 1149 de 2021
+(estructura del NPN); Resolución IGAC 388 de 2020, modificada por la
+Resolución IGAC 679 de 2022 (especificaciones del levantamiento catastral);
+Código Civil, artículos 900 y siguientes; Código General del Proceso,
+artículos 400 a 405.
 
 ## 1. Qué es el catastro
 
-Es el registro administrativo que describe los **bienes inmuebles** de un
-término municipal: su geometría, su superficie, su uso y su titularidad a
-efectos fiscales y de gestión. No confundir con el Registro de la Propiedad,
-que es un registro jurídico de derechos.
+Es el inventario o censo de los **predios** de un municipio: su geometría, su
+superficie, su uso, su avalúo y su titularidad, con fines fiscales y de
+ordenamiento. El **IGAC** es la máxima autoridad catastral del país; los
+**gestores catastrales** y **operadores catastrales** ejecutan la gestión en
+cada municipio.
 
-## 2. La parcela catastral
+Desde la Ley 1955 de 2019 se habla de **catastro multipropósito**: el mismo
+inventario sirve para lo físico, lo jurídico, lo económico, lo fiscal y el
+ordenamiento territorial. No confundir con el **registro de la propiedad**, que
+lleva la **SNR** a través de las **ORIP** y que sí da fe de los derechos
+inscritos en el **folio de matrícula inmobiliaria**.
 
-- **Parcela**: porción de suelo delimitada por una línea poligonal cerrada, con
-  una referencia catastral única.
-- **Polígono**: agrupación de parcelas dentro de una hoja del plano catastral.
-  El identificador típico es `polígono / parcela`.
-- **Manzana**: en suelo urbano, el conjunto de parcelas delimitado por calles.
-- **Hoja catastral**: documento gráfico donde se dibujan parcelas y polígonos.
+## 2. Predio y unidades de terreno
 
-## 3. Referencia catastral
+- **Predio**: inmueble delimitado por un lindero cerrado, con o sin
+  construcciones, identificado con un **NPN**.
+- **Mejora**: construcción o cultivo que no constituye por sí mismo un predio.
+- **Unidad predial**: cada una de las unidades independientes que resultan de
+  una **propiedad horizontal**.
+- **Manzana**: en suelo urbano, el conjunto de predios delimitado por vías.
+- **Sector**, **comuna** y **barrio**: divisiones urbanas que forman parte de la
+  clave del NPN. En suelo rural se usan **sector** y **vereda**.
 
-Identificador alfanumérico de 20 caracteres que individualiza un inmueble. Se
-compone de:
+## 3. Número Predial Nacional (NPN)
 
-| Bloque | Contenido |
+Identificador de **30 dígitos** que individualiza cada predio en todo el país
+(Resolución IGAC 1149 de 2021). Antes de esa resolución el número predial tenía
+20 dígitos. Sus componentes son:
+
+| Dígitos | Componente |
 | --- | --- |
-| 7 caracteres | finca o parcela |
-| 7 caracteres | hoja del plano |
-| 4 caracteres | inmueble dentro de la parcela |
-| 2 caracteres | control |
+| 1–2 | departamento |
+| 3–5 | municipio |
+| 6–7 | zona |
+| 8–9 | sector |
+| 10–11 | comuna |
+| 12–13 | barrio |
+| 14–17 | manzana o vereda |
+| 18–21 | número de terreno |
+| 22 | condición del predio |
+| 23–30 | número de construcción |
 
-Ejemplo de forma: `1234567 VG1234N 0001 WX`. Es obligatoria en escrituras,
-contratos y trámites con inmuebles.
+La posición exacta de cada componente debe confirmarse en la Resolución IGAC
+1149 de 2021 y en el Anexo D del ICDE: algunos glosarios del IGAC publican
+variantes. Lo que sí es estable: son 30 dígitos, los dos primeros identifican el
+departamento y los ocho últimos, la construcción.
 
-## 4. Linderos y deslinde
+## 4. NUPRE
 
-- **Lindero**: línea que separa dos parcelas o una parcela de un camino, río o
+El **NUPRE** (Número Único Predial y Registral) es el identificador que enlaza
+catastro y registro. Su estructura es `ABC-1234-DEFH` (Decreto 148 de 2020):
+cuatro grupos separados por guiones, con letras y números.
+
+## 5. Linderos, deslinde y amojonamiento
+
+- **Lindero**: línea que separa dos predios, o un predio de una vía, un río o un
   límite administrativo.
-- **Deslinde**: procedimiento para fijar linderos cuando hay duda o conflicto.
-- **Amojonamiento**: materialización física de los linderos con hitos o mojones.
+- **Deslinde y amojonamiento**: proceso para fijar y materializar linderos
+  dudosos. En Colombia es un proceso **judicial** regulado por los artículos 400
+  a 405 del Código General del Proceso; el artículo 401 enumera sus requisitos y
+  exige, entre otros, los certificados de tradición y libertad de los
+  colindantes. El Código Civil lo trata en los artículos 900 y siguientes.
+- En la vía administrativa, el catastro no "deslinda" propiedad: hace
+  **rectificación de linderos** o **actualización** con levantamiento topográfico
+  y, si hay conflicto entre titulares, remite al proceso judicial.
 
-## 5. Cartografía catastral
+## 6. Cartografía catastral
 
-Dos productos habituales:
+- **Modelo LADM_COL**: modelo de datos del catastro colombiano, derivado del
+  estándar LADM (ISO 19152). Las entidades clave del levantamiento son
+  `LC_PuntoLindero` y `LC_PuntoLevantamiento`.
+- **Cartografía vectorial**: polígonos de predios con atributos, editable en SIG
+  (QGIS, GeoPackage, PostGIS).
+- **Ortofoto**: imagen aérea georreferenciada del IGAC, usada como referencia
+  visual para comprobar linderos.
 
-1. **Cartografía vectorial** (parcelario): polígonos con atributos, editable en
-   SIG. Es la base para QGIS, GeoPackage o PostGIS.
-2. **Ortofoto / PNOA**: imagen aérea georreferenciada que se usa como referencia
-   visual para comprobar linderos.
+La exactitud posicional exigida depende de la escala y del tipo de suelo
+(Resolución IGAC 388 de 2020, modificada por la 679 de 2022). Se mide con el
+error circular al 95 %:
 
-La cartografía catastral se apoya en la red geodésica; por eso la calidad de un
-levantamiento depende del sistema de referencia (ver dominio de geodesia).
+| Escala | Suelo | Error máximo al 95 % |
+| --- | --- | --- |
+| 1:1.000 | urbano | 0,52 m |
+| 1:2.000 | urbano | 1,04 m |
+| 1:5.000 | rural con comportamiento urbano | 2,60 m |
+| 1:10.000 | rural | 5,2 m |
+| 1:25.000 | bosque | 13,01 m |
 
-## 6. Errores frecuentes del principiante
+## 7. Errores frecuentes del principiante
 
-- Confundir referencia catastral con número de finca registral.
-- Comparar superficies sin decir si son gráficas o construidas.
+- Confundir el **NPN** con el **folio de matrícula inmobiliaria**: el primero es
+  catastral y fiscal; el segundo es registral y jurídico.
+- Confundir **NPN** con **NUPRE**: el NPN identifica el predio en catastro; el
+  NUPRE enlaza catastro y registro.
+- Comparar superficies sin decir si son catastrales, construidas o registrales.
 - Suponer que el catastro "da fe" de la propiedad: no la da, la describe.
+- Usar un NPN de 20 dígitos en trámites actuales: desde la Resolución IGAC 1149
+  de 2021 son 30 dígitos.

@@ -1,7 +1,8 @@
-﻿# Cuerpo de conocimiento: ingeniería catastral y geodesia
+﻿# Cuerpo de conocimiento: ingeniería catastral y geodesia (Colombia)
 
 Este proyecto es un **cuerpo de conocimiento** que responde consultas sobre
-catastro y geodesia. Tres agentes de OpenCode trabajan en cadena:
+catastro y geodesia **de Colombia**. Tres agentes de OpenCode trabajan en
+cadena:
 
 ```
                      ┌─────────────────────────────┐
@@ -58,7 +59,7 @@ Dentro de OpenCode, el agente C es el agente por defecto. También puedes usar e
 atajo:
 
 ```
-/consulta ¿Qué diferencia hay entre referencia catastral y número de parcela?
+/consulta ¿Qué diferencia hay entre NPN y NUPRE?
 ```
 
 ## Reglas del sistema
@@ -68,3 +69,5 @@ atajo:
 - El agente B solo responde geodesia; si le preguntas catastro, deriva a A.
 - Las consultas mixtas se envían a los dos y C integra en dos secciones.
 - Los agentes citan el archivo de `conocimiento/` que usaron.
+- Todo el contenido está contextualizado a **Colombia**: IGAC, SNR, NPN,
+  NUPRE, MAGNA-SIRGAS y CTM12. No se usan normas de otros países.

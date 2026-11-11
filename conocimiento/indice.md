@@ -1,4 +1,4 @@
-# Base de conocimiento — Ingeniería catastral y geodesia
+# Base de conocimiento — Ingeniería catastral y geodesia (Colombia)
 
 Este directorio es el **cuerpo de conocimiento** que consultan los agentes.
 Cada especialista lee solo su carpeta.
@@ -22,12 +22,14 @@ conocimiento/
    que sale el contenido.
 3. Al añadir un tema nuevo: crear el archivo en la carpeta del dominio y
    enlazarlo en este índice. No hace falta tocar los agentes.
+4. Todo el contenido está contextualizado a **Colombia**: IGAC, SNR, NPN,
+   NUPRE, MAGNA-SIRGAS, CTM12. No se usan normas de otros países.
 
 ## Mapa de temas
 
 | Tema | Dominio | Archivo |
 | --- | --- | --- |
-| Parcela, polígono, referencia catastral, linderos | Catastro | `catastro/01-conceptos.md` |
-| Superficie, valor catastral, deslinde, concentración parcelaria | Catastro | `catastro/02-procesos.md` |
-| Datum, ETRS89, WGS84, EPSG, UTM, geoide | Geodesia | `geodesia/01-sistemas-referencia.md` |
-| GNSS, RTK, nivelación, transformación de coordenadas, tolerancias | Geodesia | `geodesia/02-gnss-transformaciones.md` |
+| Predio, NPN de 30 dígitos, NUPRE, linderos, deslinde | Catastro | `catastro/01-conceptos.md` |
+| Superficies, avalúo catastral, IPU, barrido predial, ordenamiento social de la propiedad | Catastro | `catastro/02-procesos.md` |
+| Datum, MAGNA-SIRGAS, WGS84, EPSG, CTM12, Gauss-Krüger, geoide | Geodesia | `geodesia/01-sistemas-referencia.md` |
+| GNSS, MAGNA-ECO, RTK, nivelación, cambio de época, tolerancias | Geodesia | `geodesia/02-gnss-transformaciones.md` |
