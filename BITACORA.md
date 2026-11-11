@@ -1,6 +1,6 @@
 # Bitácora del proyecto — Cuerpo de conocimiento de ingeniería catastral y geodesia
 
-- **Estudiante:** based-tinkerer-8968 (OpenCode School)
+- **Estudiantes:** Yherman Flautero y Maicol Torres (OpenCode School)
 - **Proyecto:** sistema multiagente local orquestado por OpenCode
 - **Fecha de construcción:** 10 de noviembre de 2026
 - **Repositorio:** `catastro-geodesia-agentes`
