@@ -130,3 +130,11 @@ catastro-geodesia-agentes/
   `description` y su dominio, y añádelo al prompt del enrutador.
 - Cambiar C a local: en `.opencode/agent/agente-c-enrutador.md` pon
   `model: ollama/geodesia-qwen:latest`. Requiere reiniciar OpenCode.
+
+##  Instrucciones de ejecución para el profesor
+
+Para ejecutar el sistema multiagente localmente:
+1. Descarga o clona este repositorio.
+2. Mueve el contenido de la carpeta `config_agentes` a tu carpeta local `.opencode`.
+3. Ejecuta el comando `npm install` dentro de la carpeta `.opencode` para instalar las dependencias.
+4. Abre la terminal en la raíz del proyecto e inicia OpenCode con `opencode`.
